@@ -1,0 +1,35 @@
+<core:FragmentDefinition 
+	xmlns="sap.m" 
+	xmlns:core="sap.ui.core" 
+	xmlns:f="sap.ui.layout.form"
+	xmlns:semantic="sap.f.semantic"> 
+	
+	<Panel class="sapUiResponsiveMargin" width="auto" headerText="{i18n>employeeDetails}" 
+		expandable="{device>/system/phone}" 
+		expanded="false">
+		<content>
+			<f:SimpleForm
+				id="employeeDetails"
+				editable="false" 
+				layout="ResponsiveGridLayout" 
+				labelSpanL="3" 
+				labelSpanM="3" 
+				emptySpanL="4" 
+				emptySpanM="4" 
+				columnsL="1"
+				columnsM="1">
+				<f:content>
+					<Label id="title" text="{i18n>title}"/>
+					<Text text="{Title}"/>
+					<Label text="{i18n>titleOfCourtesy}"/>
+					<Text text="{TitleOfCourtesy}"/>
+					<Label text="{i18n>birthdate}"/>
+					<Text text="{BirthDate}"/>
+					<Label text="{i18n>hireDate}"/>
+					<Text text="{HireDate}"/>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+	</Panel>
+
+</core:FragmentDefinition>

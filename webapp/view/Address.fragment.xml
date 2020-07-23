@@ -1,0 +1,22 @@
+<core:FragmentDefinition 
+	xmlns="sap.m" 
+	xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form"> 
+	<Panel class="sapUiResponsiveMargin" width="auto" headerText="{i18n>addressTitle}" expandable="{device>/system/phone}" expanded="false">
+		<content>
+			<List id="EmployeeDetail">
+				<items>
+					<StandardListItem icon="sap-icon://building" title="{Address}"/>
+					<StandardListItem icon="sap-icon://email" title="{Region}"/>
+					<StandardListItem icon="sap-icon://world" title="{PostalCode}"/>
+					<StandardListItem icon="sap-icon://phone" title="{HomePhone} {Extension}"/>
+					<StandardListItem icon="sap-icon://map" title="{City}"/>
+				</items>
+			</List>
+		</content>
+	</Panel>
+	<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>mapTitle}">
+		<Image
+			src="{ parts: [ 'Address', 'PostalCode, 'City', 'Country' ], formatter: '.formatter.formatMapUrl' }"/>
+	</Panel>
+</core:FragmentDefinition>

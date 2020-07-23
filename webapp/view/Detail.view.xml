@@ -1,0 +1,71 @@
+<mvc:View
+	controllerName="corp.basf.ProjectBasf.controller.Detail"
+	xmlns="sap.m"
+	xmlns:semantic="sap.f.semantic"
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc">
+
+	<semantic:SemanticPage
+		id="detailPage"
+		busy="{detailView>/busy}"
+		busyIndicatorDelay="{detailView>/delay}">
+		<semantic:titleHeading>
+			<Title
+				text="{FirstName}"
+				level="H2"/>
+		</semantic:titleHeading>
+		
+		<semantic:headerContent>
+			<ObjectAttribute
+				title="{i18n>lastName}"
+				text="{LastName}"/>
+				
+		</semantic:headerContent>
+		<semantic:headerContent>
+			<ObjectAttribute
+				title="{i18n>manage}"
+				text="{Employee1/LastName} {Employee1/FirstName}"/>
+				
+		</semantic:headerContent>
+		<semantic:content>
+			
+		</semantic:content>
+		<!--Semantic ShareMenu Buttons-->
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction
+				id="shareEmail"
+				press=".onSendEmailPress"/>
+		</semantic:sendEmailAction>
+
+		<semantic:closeAction>
+			<semantic:CloseAction
+					id="closeColumn"
+					press=".onCloseDetailPress"/>
+		</semantic:closeAction>
+
+		<semantic:fullScreenAction>
+			<semantic:FullScreenAction
+					id="enterFullScreen"
+					visible="{= !${device>/system/phone} &amp;&amp; !${appView>/actionButtonsInfo/midColumn/fullScreen}}"
+					press=".toggleFullScreen"/>
+		</semantic:fullScreenAction>
+		<semantic:exitFullScreenAction>
+			<semantic:ExitFullScreenAction
+					id="exitFullScreen"
+					visible="{= !${device>/system/phone} &amp;&amp; ${appView>/actionButtonsInfo/midColumn/fullScreen}}"
+					press=".toggleFullScreen"/>
+		</semantic:exitFullScreenAction>
+		
+		<Panel
+			class="sapUiResponsiveMargin"
+			width="auto"
+			expandable="{device>/system/phone}"
+			expanded="true">
+			<core:Fragment fragmentName="corp.basf.ProjectBasf.view.Employee" type="XML" />
+			<core:Fragment fragmentName="corp.basf.ProjectBasf.view.Address" type="XML" />
+		</Panel>
+	
+	</semantic:SemanticPage>
+
+</mvc:View>
