@@ -24,9 +24,10 @@ sap.ui.define([], function () {
 			 * @param {string} sCity the city
 			 * @param {string} sCountry the country
 			 * @returns {string} sValue a google maps URL that can be bound to an image
+			 * "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=640x640&markers="
 			 */
 			formatMapUrl: function(sStreet, sZIP, sCity, sCountry) {
-				return "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=640x640&markers="
+				return "https://www.google.com/maps/search/?api=1"
 					+ jQuery.sap.encodeURL(sStreet + ", " + sZIP +  " " + sCity + ", " + sCountry);
 			}
 	};

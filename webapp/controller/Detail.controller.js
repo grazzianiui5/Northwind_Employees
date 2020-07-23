@@ -90,6 +90,9 @@ sap.ui.define([
 
 			this.getView().bindElement({
 				path : sObjectPath,
+				parameters: {
+					expand: "Employees1"
+				},
 				events: {
 					change : this._onBindingChange.bind(this),
 					dataRequested : function () {

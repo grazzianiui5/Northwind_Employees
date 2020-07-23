@@ -20,17 +20,24 @@
 			<ObjectAttribute
 				title="{i18n>lastName}"
 				text="{LastName}"/>
-				
 		</semantic:headerContent>
+		
 		<semantic:headerContent>
 			<ObjectAttribute
 				title="{i18n>manage}"
-				text="{Employee1/LastName} {Employee1/FirstName}"/>
+				text="{Employees1>/LastName} {Employees1>/FirstName}"/>
 				
 		</semantic:headerContent>
+		
+		<semantic:headerContent>
+			<ObjectAttribute
+				title="{i18n>notes}"
+				text="{Notes}"/>
+		</semantic:headerContent>
+		
 		<semantic:content>
-			
 		</semantic:content>
+		
 		<!--Semantic ShareMenu Buttons-->
 		<semantic:sendEmailAction>
 			<semantic:SendEmailAction
