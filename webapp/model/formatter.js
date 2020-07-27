@@ -27,6 +27,9 @@ sap.ui.define([], function () {
 			 * "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=640x640&markers="
 			 */
 			formatMapUrl: function(sStreet, sZIP, sCity, sCountry) {
+				debugger;
+				alert("https://www.google.com/maps/search/?api=1"
+					+ jQuery.sap.encodeURL(sStreet + ", " + sZIP +  " " + sCity + ", " + sCountry));
 				return "https://www.google.com/maps/search/?api=1"
 					+ jQuery.sap.encodeURL(sStreet + ", " + sZIP +  " " + sCity + ", " + sCountry);
 			}

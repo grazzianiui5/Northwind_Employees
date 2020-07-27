@@ -91,7 +91,7 @@ sap.ui.define([
 			this.getView().bindElement({
 				path : sObjectPath,
 				parameters: {
-					expand: "Employees1"
+					expand: "Employee1"
 				},
 				events: {
 					change : this._onBindingChange.bind(this),

@@ -17,6 +17,6 @@
 	</Panel>
 	<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>mapTitle}">
 		<Image
-			src="{ parts: [ 'Address', 'PostalCode, 'City', 'Country' ], formatter: '.formatter.formatMapUrl' }"/>
+			src="https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=640x640&markers="/>
 	</Panel>
 </core:FragmentDefinition>

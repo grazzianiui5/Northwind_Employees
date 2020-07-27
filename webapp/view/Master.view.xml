@@ -22,8 +22,8 @@
 				class="sapFDynamicPageAlignContent"
 				items="{
 					path: '/Employees',
-					parameter: {
-								expand: 'Employees1'
+					parameters: {
+								'expand': 'Employee1'
 							},
 					sorter: {
 						path: 'FirstName',
@@ -66,8 +66,7 @@
 					<ObjectListItem
 						type="Navigation"
 						press=".onSelectionChange"
-						title="{FirstName}"
->
+						title="{FirstName}">
 					</ObjectListItem>
 				</items>
 			</List>
